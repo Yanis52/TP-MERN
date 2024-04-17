@@ -1,0 +1,28 @@
+
+GET http://localhost:3002/api/directors/
+
+###
+POST http://localhost:3002/api/directors
+Content-Type: application/json
+
+{
+    "name": "Director 2",
+    "birthDate": "1990-01-01",
+    "biography": "Biography 2"
+},
+{
+    "name": "Director 3",
+    "birthDate": "1990-01-01",
+    "biography": "Biography 3"
+},
+{
+    "name": "Director 4",
+    "birthDate": "1990-01-01",
+    "biography": "Biography 4"
+},
+{
+    "name": "Director 5",
+    "birthDate": "1990-01-01",
+    "biography": "Biography 5"
+}
+
