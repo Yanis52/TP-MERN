@@ -1,28 +1,92 @@
-
+###DIRECTORS
 GET http://localhost:3002/api/directors/
+
+###
+GET http://localhost:3002/api/directors/661fea59bacc252204264d6a
 
 ###
 POST http://localhost:3002/api/directors
 Content-Type: application/json
 
 {
-    "name": "Director 2",
+    "name": "Director 1",
     "birthDate": "1990-01-01",
-    "biography": "Biography 2"
-},
-{
-    "name": "Director 3",
-    "birthDate": "1990-01-01",
-    "biography": "Biography 3"
-},
-{
-    "name": "Director 4",
-    "birthDate": "1990-01-01",
-    "biography": "Biography 4"
-},
-{
-    "name": "Director 5",
-    "birthDate": "1990-01-01",
-    "biography": "Biography 5"
+    "biography": "Biography 1"
 }
+###
+
+PUT http://localhost:3002/api/directors/661fea59bacc252204264d6a
+Content-Type: application/json
+
+{
+    "name": "Director 1",
+    "birthDate": "1990-01-01",
+    "biography": "yanis 1"
+}
+###
+
+DELETE http://localhost:3002/api/directors/661feaa3bacc252204264d6c
+
+###FILMS
+
+GET http://localhost:3002/api/films/
+
+###
+GET http://localhost:3002/api/films/661feaa3bacc252204264d6c
+
+###
+
+POST http://localhost:3002/api/films
+Content-Type: application/json
+
+{
+    "title": "Film 1",
+    "releaseYear": 2020,
+    "genre": "Action"
+}
+###
+
+PUT http://localhost:3002/api/films/661fee0ded237ece21b4d079
+Content-Type: application/json
+
+{
+    "title": "Film 1",
+    "releaseYear": 2030,
+    "genre": "Action"
+}
+###
+
+DELETE http://localhost:3002/api/films/661fee0ded237ece21b4d079
+
+###Sessions
+
+GET http://localhost:3002/api/session
+
+###
+GET http://localhost:3002/api/session/661feea6ed237ece21b4d07e
+
+###
+
+POST http://localhost:3002/api/session
+Content-Type: application/json
+
+{
+    "date": "2020-01-01",
+    "time": "12:00",
+    "availableSeats": 100
+}
+
+###
+
+PUT http://localhost:3002/api/session/661feea6ed237ece21b4d07e
+Content-Type: application/json
+
+{
+    "date": "2020-01-01",
+    "time": "14:00",
+    "availableSeats": 200
+}
+###
+
+DELETE http://localhost:3002/api/session/661feea6ed237ece21b4d07e
 

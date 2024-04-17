@@ -17,7 +17,7 @@ const ISession_1 = __importDefault(require("../models/ISession"));
 const router = (0, express_1.Router)();
 router.get('/api/session', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const session = ISession_1.default.find();
+        const session = yield ISession_1.default.find();
         res.status(200).json(session);
     }
     catch (err) {
@@ -26,7 +26,7 @@ router.get('/api/session', (req, res) => __awaiter(void 0, void 0, void 0, funct
 }));
 router.get('/api/session/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const session = ISession_1.default.findById(req.params.id);
+        const session = yield ISession_1.default.findById(req.params.id);
         res.status(200).json(session);
     }
     catch (err) {

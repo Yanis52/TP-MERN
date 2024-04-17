@@ -6,7 +6,7 @@ const router = Router();
 
 router.get('/api/session', async (req: Request, res: Response) => {
     try {
-        const session = SessionModel.find();
+        const session = await SessionModel.find();
         res.status(200).json(session);
     } catch (err) {
         res.status(500).json({message: 'Erreur lors de la récupération des sessions'});
@@ -16,7 +16,7 @@ router.get('/api/session', async (req: Request, res: Response) => {
 
 router.get('/api/session/:id', async (req: Request, res: Response) => {
     try {
-        const session = SessionModel.findById(req.params.id);
+        const session = await SessionModel.findById(req.params.id);
         res.status(200).json(session);
     } catch (err) {
         res.status(500).json({message: 'Erreur lors de la récupération de la session'});
